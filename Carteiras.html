@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteiras Digitais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            overflow-y: auto; /* Permite rolagem vertical */
+            position: relative;
+        }
+
+        /* Vídeo de fundo fixo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Container da página */
+        .container {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            color: cyan;
+        }
+
+       .wmb {
+            font-size: 1.7rem; /* Tamanho reduzido para melhorar o layout */
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Layouts */
+        .layout {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 700px; /* Reduzi o tamanho máximo para melhor ajuste */
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .layout iframe {
+            width: 100%;
+            max-width: 350px; /* Tamanho ajustado do vídeo */
+            height: 200px; /* Tamanho ajustado do vídeo */
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .layout-content {
+            flex-grow: 1;
+        }
+
+        .layout h2 {
+            font-size: 1.5rem; /* Tamanho de texto reduzido */
+            margin-bottom: 10px;
+        }
+
+        .layout p {
+            font-size: 0.9rem; /* Tamanho de texto reduzido */
+            margin-top: 10px;
+            text-align: justify; /* Texto alinhado à esquerda com espaçamento */
+        }
+
+        /* Botões */
+        .btn {
+            background-color: #00aaff; /* Cor do botão */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 0.9rem; /* Tamanho reduzido do botão */
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 15px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0088cc;
+            color: #fff;
+        }
+
+        /* Ícone de página inicial */
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .home-icon:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon::before {
+            content: '🏠';
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        /* Botão Voltar */
+        .back-btn {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #00aaff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 40px auto;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #00aaff;
+            color: #fff;
+        }
+
+        /* Animação de título */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .layout {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .layout iframe {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .btn, .back-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .home-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .home-icon::before {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Vídeo de fundo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="jack1.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
+
+    <!-- Container da página -->
+    <div class="container">
+        <h2 class="wmb">Carteiras Digitais</h2>
+
+        <!-- Layout 1 -->
+        <div class="layout">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+            <div class="layout-content">
+                <h2>Introdução às Carteiras Digitais</h2>
+                <p>Entenda os conceitos fundamentais de carteiras digitais e aprenda como utilizá-las de forma eficiente.</p>
+                <a href="#" class="btn">Começar</a>
+            </div>
+        </div>
+
+        <!-- Layout 2 -->
+        <div class="layout">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+            <div class="layout-content">
+                <h2>Tipos de carteiras e suas funcões</h2>
+                <p>Conhecendo algumas carteiras e as suas funções.</p>
+                <a href="#" class="btn">Começar</a>
+            </div>
+        </div>
+
+        <!-- Layout 3 -->
+        <div class="layout">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+            <div class="layout-content">
+                <h2>Criando conta na RedotPay</h2>
+                <p>Descubra como realizar transações seguras e rápidas usando carteiras digitais no seu dia a dia.</p>
+                <a href="#" class="btn">Começar</a>
+            </div>
+        </div>
+
+        <!-- Botão Voltar -->
+        <a href="categoria.html" class="back-btn">Voltar</a>
+    </div>
+
+    <!-- Ícone de Página Inicial -->
+    <div class="home-icon" onclick="window.location.href='index.html'"></div>
+
+</body>
+</html>
